@@ -23,7 +23,7 @@ def rename(path):
             count += 1
 
 def main():
-    binary = rename('data/images')
+    new_name = rename('data/images')
     
 if __name__ == "__main__":
     main()
