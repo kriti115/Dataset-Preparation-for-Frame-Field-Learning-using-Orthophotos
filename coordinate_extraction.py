@@ -11,11 +11,11 @@ from PIL import Image
 
 def polygon_extraction():
     #with open('data/geojson/395_5707_rad.geojson', 'r',  encoding="utf8" ) as f:
-    with open('data/geojson/cuxhaven/cuxhaven7.geojson', 'r',  encoding="utf8" ) as f:
+    with open('data/geojson/lueneburg/lueneburg14.geojson', 'r',  encoding="utf8" ) as f:
         data = json.loads(f.read())
 
         ''' Extract coordinates for each polygon '''
-    
+
     coord = []
     #print(len(data['features']))
     for i in range(len(data['features'])):
@@ -25,39 +25,21 @@ def polygon_extraction():
         
     coordinates = []
     for i in range(len(coord)): # 2099
-        #if len(coord) == 1:
-        for j in range(len(coord[i])):
-            c = coord[i][j]
-            coordinates.append(c)
-#         else:
-#             for j in range(len(coord[i])):
-#                 for k in range(len(coord[j])):
-#                     c = coord[i][j][k]
-#                     coordinates.append(c)
+        if len(coord[i]) == 1:
+            for j in range(len(coord[i])):
+                c = coord[i][j]
+                coordinates.append(c)
+        else:
+            for j in range(len(coord[i])):
+                #print(j)
+                for k in range(len(coord[j])): 
+                    c = coord[i][j][k]
+                    coordinates.append(c)
     print(len(coordinates), '\n')
-    print((coordinates[0][0][0]), '\n')
-    
-#     coord = []
-#     #print(len(data['features']))
-#     for i in range(len(data['features'])):
-#         coo = data['features'][i]['geometry']['coordinates']
-#         #print(coord, '\n')
-#         coord.append(coo)
-      
-#     coordinates = []
-#     for i in range(len(coord)): # 2099
-#         if len(coord[i]) == 1:
-#             for j in range(len(coord[i])):
-#                 c = coord[i][j]
-#                 coordinates.append(c)
-#         else:
-#             for j in range(len(coord[i])):
-#                 #print(j)
-#                 for k in range(len(coord[j])): 
-#                     c = coord[i][j][k]
-#                     coordinates.append(c)
-#     print(len(coordinates), '\n')
-    
+#     print(coordinates[0], '\n')
+#     print(coordinates[0][0], '\n')
+    #print(coordinates[0][0][0], '\n')
+
 
     ''' Get minimum and maximum coordinates '''
     def get_coor_in_space(image_filepath):
@@ -75,22 +57,21 @@ def polygon_extraction():
     
     ''' Convert to pixel coordinates '''
     #image_filepath = 'data/tif/395_5707.tif'
-    image_filepath = 'data/tif/cuxhaven/cuxhaven7.tif'
+    image_filepath = 'data/downloaded_data/images/lueneburg/lueneburg14.tif'
     x_min =  get_coor_in_space(image_filepath)[0]
     y_min =  get_coor_in_space(image_filepath)[1]
     #print(x_min, y_min)
 
     polygon = []
     for i in range (len(coordinates)):
-        #print('i : ',i)
+        #print(i)
         x_pixel = []
         y_pixel = []
         for j in range(len(coordinates[i])):
-            #print('j : ',j)
-            #for k in range(len(coordinates[j])):
-                #print('k : ', k )
-            x_pix =  int((coordinates[i][j][0]-x_min)*5) # scaling = 10000/2000 = 5 i.e. Image size/pixel size
-            y_pix =  int(10000 - ((coordinates[i][j][1]-y_min)*5))
+            #print(j)
+            x_pix =  int((coordinates[i][j][0]-x_min)*5) # scaling = 10000/2000 = 5 i.e. image size/pixel size
+            y_pix =  int(10000 - ((coordinates[i][j][1]-y_min)*5)) 
+          
             x_pixel.append(x_pix)
             y_pixel.append(y_pix)
         #print('x_pixel:', x_pixel, '\n', 'y_pixel: ',y_pixel, ' \n')
@@ -115,3 +96,4 @@ def main():
     
 if __name__ == "__main__":
     main()
+
