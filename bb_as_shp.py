@@ -1,7 +1,7 @@
 ''' 
 
 Extracting bounding box as shapefiles with naming equivalent to the image name. 
-New folder called bounding_box is automatically created.
+New folder called bounding_box is automatically created with folders for each city consisting their respective bounding boxes.
 
 ''' 
 
@@ -26,7 +26,6 @@ def bb_as_shp(path_to_image):
             print(image_path[i][j])
             bb = boundingBox(image_path[i][j])
             bound_box.append(bb)
-    #print(bound_box)
     
     createFolder('./data/bounding_box/')
     bb = []
