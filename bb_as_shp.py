@@ -1,4 +1,9 @@
-''' Extracting bounding box as shapefiles with naming equivalent to the image name! with the directory and other utilities as function ''' 
+''' 
+
+Extracting bounding box as shapefiles with naming equivalent to the image name. 
+New folder called bounding_box is automatically created.
+
+''' 
 
 import shapely.geometry
 import pandas as pd
@@ -34,7 +39,7 @@ def bb_as_shp(path_to_image):
              geometry = [bb]).to_file('data/bounding_box/{}/{}.shp'.format(cities[i], image_name[i][j]))
 
 def main():
-    bounding = bb_as_shp('data/downloaded_data/images')
+    bounding = bb_as_shp('data/images')
     
 if __name__ == "__main__":
     main() 
