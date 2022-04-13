@@ -12,7 +12,7 @@ We use true orthophotos and shapefiles of building as raw data which is processe
 The data required can be downloaded from the link provided below:
 ....
 
-There are two folders: data_for_training and downloaded_data. The 1st folder contains the ready to use dataset while the 2nd folder contains the raw data which is downloaded from the sources mentioned in the report. The downloaded_data folder must be used to perform the steps mentioned above. 
+There are two folders: data_for_training and downloaded_data. The 1st folder contains the ready to use dataset which can be downloaded and saved as named on the link. The 2nd folder contains the raw data which is downloaded from the sources mentioned in the report. The downloaded_data folder must be used to perform the steps mentioned above. The images and shapefiles must be saved as subfolders in a folder named data e.g. data/images and data/shapefiles.
 
 A step-by-step process is described below:
 
