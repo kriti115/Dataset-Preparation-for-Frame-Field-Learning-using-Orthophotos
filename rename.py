@@ -18,7 +18,7 @@ def rename(path):
         #print(city_fold) # path till folder with city name
         count = 1
         for file_name in os.listdir(city_fold):
-            #print(file_name) # the files inside the city name folder i.e tifs
+            #print(file_name) 
             old = os.path.join(city_fold, file_name)
             new = os.path.join(city_fold, '{}{}.tif'.format(city_name, count))
             if os.path.isfile(new):
