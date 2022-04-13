@@ -1,4 +1,9 @@
-# Rename image files: folderwise
+''' 
+
+Renames the downloaded images folderwise giving them the name of the city and a serial number: e.g. city01.tif
+Changes the name directly inside the existing folder, no new folders are created.
+
+'''
 
 import os
 
