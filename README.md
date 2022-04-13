@@ -16,12 +16,13 @@ There are two folders: data_for_training and downloaded_data. The 1st folder con
 
 A step-by-step process is described below:
 
-1. Run rename.py
-2. Run bb_as_shp.py
+1. Run python rename.py 
+2. Run python bb_as_shp.py
 3. Run clip_shapefile.py
 4. Run shp_to_geojson.py
 5. Run coordinate_extraction.py
 6. Run poly_to_binary_mask.py
 7. Run to_npy.py
 
+The python file with utility written on the description are helping functions which are frequetly used in different codes e.g. for getting directory, extracting bounding box and creating folders.
 
