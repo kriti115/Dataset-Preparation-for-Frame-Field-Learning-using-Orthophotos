@@ -18,6 +18,11 @@ A step-by-step process is described below:
 
 1. Run python rename.py 
 2. Run python bb_as_shp.py
+
+!!! WORK IN PROGRESS !!! 
+
+Direct implementation is not possible from here on below as the folderwise operations have not been implemented yet. Therefore, the folder names must be changed for each folder and new folders must be manually created. The codes work so they can be used for test but it is time consuming at the moment. Updates will be made soon.
+
 3. Run clip_shapefile.py
 4. Run shp_to_geojson.py
 5. Run coordinate_extraction.py
