@@ -30,4 +30,4 @@ def main():
     binary = poly_to_binary_mask(polygon)
     
 if __name__ == "__main__":
-    main()
+    main() 
