@@ -11,4 +11,4 @@ poly_array = np.array([np.array(i) for i in polygon])
 #count = 1
 for i in range(len(poly_array)):
     with open('data/npy/cuxhaven/cuxhaven7.npy', 'wb') as f: 
-        np.save(f,poly_array)
+        np.save(f,poly_array) 
