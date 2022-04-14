@@ -82,7 +82,7 @@ def polygon_extraction():
             pixel[i][0] = x_pixel[i]
             pixel[i][1] = y_pixel[i]
         polygon.append(pixel)
-    #print(polygon)
+    #print(polygon) 
 
     return polygon
 
