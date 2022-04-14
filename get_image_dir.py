@@ -32,7 +32,7 @@ def get_dir(path):
     return (name, path_to_name, cities)
 
 def main():
-    bounding = get_dir('data/tif')
+    bounding = get_dir('data/tif') 
     
 if __name__ == "__main__":
     main() 
