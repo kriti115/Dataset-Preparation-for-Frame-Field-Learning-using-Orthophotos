@@ -32,7 +32,7 @@ def get_dir(path):
         path_to_name.append(image_path_indi)
 
     #print('\n', name, '\n','\n', path_to_name, '\n')
-    return (name, path_to_name)
+    return (name, path_to_name) 
 
 def main():
     bounding = get_dir('data/bounding_box')
