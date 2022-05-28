@@ -32,7 +32,7 @@ def bb_as_shp(path_to_image):
     for i in range(len(image_path)): # 4
         createFolder('./data/bounding_box/{}/'.format(cities[i])) 
         for j in range(len(image_path[i])): 
-            bb = shapely.geometry.box(*bound_box[i], ccw=True)
+            bb = shapely.geometry.box(*bound_box[j], ccw=True)
             print(bb)
             gpd.GeoDataFrame(pd.DataFrame(['p1'], columns = ['geom']),crs = {'init': 'epsg:25832'},
              geometry = [bb]).to_file('data/bounding_box/{}/{}.shp'.format(cities[i], image_name[i][j]))
