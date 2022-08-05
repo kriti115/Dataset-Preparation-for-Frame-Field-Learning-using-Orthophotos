@@ -1,4 +1,4 @@
-# Evaluation-of-Frame-Field-Learning-for-Orthophotos
+# Dataset-Preparation-for-Frame-Field-Learning-using-Orthophotos
 An evaluation of the frame field learning technique for extraction of building polygons in vector format from true orthophotos.
 
 This is the code for preparation of dataset from scratch for running a network using the Frame Field Learning technique. The study area is Lower saxony which includes 10 cities as shown below:
