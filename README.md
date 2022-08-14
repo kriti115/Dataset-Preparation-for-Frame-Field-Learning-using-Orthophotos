@@ -11,10 +11,9 @@ We use true orthophotos and shapefiles of building as raw data which is processe
 
 The data required can be downloaded from the link provided below:
 
-https://tubcloud.tu-berlin.de/s/4SgSPPwHnbidx9c
+1. data_for_training: https://tubcloud.tu-berlin.de/s/M6PobTMpaX6q7Ap
+It contains the ready to use dataset which can be downloaded as a zip file.
 
-
-There are two folders: data_for_training and downloaded_data. The 1st folder contains the ready to use dataset which can be downloaded and saved as named on the link.
 The final data used for training is described as below:
 
 1. images: The renamed image tiles as tifs (obtained after running rename.py)
@@ -22,7 +21,11 @@ The final data used for training is described as below:
 3. gt_polygons: The numpy files of building polygons (obtained after running to_npy.py)
 4. gt_polygonized: Not obtained here, the polygonization algorithm suggested by the original paper needs to be implemented. Explained in detail in the report.
 
-The 2nd folder contains the raw data which is downloaded from the sources mentioned in the report. The downloaded_data folder must be used to perform the steps mentioned above. The images and shapefiles must be saved as subfolders in a folder named data e.g. data/images and data/shapefiles.
+
+2. downloaded_data: https://tubcloud.tu-berlin.de/s/Pz5ydNtBJYtjJZN
+It contains the raw tif and shapefile which need to be processed as described below.
+
+It contains the raw data which is downloaded from the sources mentioned in the report. The downloaded_data folder must be used to perform the steps mentioned above. The images and shapefiles must be saved as subfolders in a folder named data e.g. data/images and data/shapefiles.
 
 A step-by-step process is described below:
 
