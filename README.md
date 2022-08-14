@@ -7,7 +7,7 @@ This is the code for preparation of dataset from scratch for running a network u
 
 We use true orthophotos and shapefiles of building as raw data which is processed to obtained the traninable data. The steps can be described as shown in the figure below:
 
-![alt text](images/Flowchart.png)
+![alt text](images/flow_data.png)
 
 The data required can be downloaded from the link provided below:
 
